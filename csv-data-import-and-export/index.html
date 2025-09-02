@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data import and Export</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="data-source box">
+        <header>
+            <span><i class="fa-solid fa-file-csv"></i></span>
+            <p>Data Source</p>
+            <div>
+                <button id="upload-btn" class="btns">
+                    <i class="fa-solid fa-upload"></i>
+                    <h4>Upload<br>File</h4>
+                </button>
+            </div>
+        </header>
+        <div class="data-source-preview">
+            <textarea name="preview-imported" id="preview-import" spellcheck="false"></textarea>
+            <div class="placeholder-text">Paste your CSV data or Type CSV here</div>
+        </div>
+        <button id="generate-btn" class="btns">
+                   <i class="fa-solid fa-gear"></i>
+                    <h4>Generate<br>Table</h4>
+        </button>
+    </div>
+    <div class="table-editor box">
+        <header>
+            <span><i class="fa-solid fa-file-csv"></i></span>
+            <p>Online Table Editor</p>
+        </header>
+        <div class="table-size-editor-box">
+            <div class="input-box">
+                <label for="rows">rows</label>
+                <input type="number" id="rows" name="Rows" autocomplete="off" step="1" placeholder="5">
+            </div>
+            <span>X</span>
+            <div class="input-box">
+                <label for="columns">columns</label>
+                <input type="number" id="columns" name="Columns" step="1" placeholder="4" autocomplete="off">
+            </div>
+        </div>
+        <div class="table-container">
+        </div>
+    </div>
+    <div class="preview-container box">
+        <header>
+            <span><i class="fa-solid fa-file-csv"></i></span>
+            <p>CSV Generator</p>
+            <div>
+                <button id="copy-btn" class="btns">
+                    <i class="fa-solid fa-copy"></i>
+                    <h4>Copy to<br>Clipboard</h4>
+                </button>
+                <button id="download-btn" class="btns">
+                    <i class="fa-solid fa-download"></i>
+                    <h4>Download<br>File</h4>
+                </button>
+            </div>
+        </header>
+        <pre id="preview-csv"></pre>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

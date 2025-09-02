@@ -1,0 +1,252 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+body{
+    background-color: #10192c;
+    padding-bottom: 700px;
+}
+
+.box{
+    width: 70%;
+    height: 80vh;
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    position: relative;
+}
+.box header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 0.125rem 0.5rem 0 0.25rem;
+}
+.box header p{
+    font-size: 0.5rem;
+    font-weight: 600;
+    color:white;
+    margin-left:0.5rem;
+}
+.box header span{
+    padding:0.25rem;
+    background-color: #10192c;
+    clip-path: circle(30%);
+}
+.box header span i{
+    font-size: 0.5rem;
+    color:#11ab7a;
+    padding-bottom: 0.5rem;
+}
+.table-size-editor-box{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top:1.5rem;
+    caret-color: transparent;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-box label{
+    font-size: 0.4rem;
+    font-weight: 600;
+    color:#11ab7a;
+    padding:0.125rem;
+}
+.input-box input{
+    width: 60%;
+    font-size: 0.4rem;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 0.125rem;
+    background-color: #10192c;
+    color:whitesmoke;
+    padding:0.125rem 0.5rem;
+    caret-color: whitesmoke;
+    text-align: center;
+}
+.input-box input::-webkit-outer-spin-button,
+.input-box input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin:0;
+}
+.table-size-editor-box  span{
+    font-size: 0.5rem;
+    color:#0c8861;
+    font-weight: 700;
+    padding-top:0.6rem;
+}
+.table-editor{
+    height: 90vh;
+}
+.table-container{
+    margin: 0 auto;
+    padding:0.25rem;
+    border-radius: 1px;
+    background-color: #6b7280;
+    width: 300px;
+    height: 60vh;
+    margin-top: 1.5rem;
+    overflow: auto;
+}
+.editor-table{
+    width: 100%;
+    background-color: #10192c;
+    border: 1px solid #11ab7a;
+    border-radius: 2px;
+}
+.cell{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.4rem;
+    font-weight: 500;
+    color:#eaebed;
+    background-color: #314663;
+    text-align: left;
+    padding:0.25rem 0.125rem 0.25rem 0.25rem;
+}
+.table-col{
+    height: 1rem;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+}
+.corner-cell,
+.sider-cells,
+.header-cells{
+    font-size: 0.3rem;
+    font-weight: 600;
+    text-align: center;
+    color:#0c8861;
+    background-color: #10192c;
+}
+.sider-cells{
+    padding: 5px;
+}
+.corner-cell{
+    font-size: 0.5rem;
+}
+
+.measure-span{
+    background-color: red;
+    font-weight: 500;
+    top:4rem;
+    left:1rem;
+    padding:0.25rem 0.125rem 0.25rem 0.25rem;
+}
+
+#preview-csv{
+    width: 90%;
+    height: 50vh;
+    padding:0.5rem;
+    background-color: #314663;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    font-size: 0.4rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 1px;
+    caret-color: transparent;
+    color:whitesmoke;
+    margin-top: 1rem;
+    overflow: scroll;
+}
+
+.preview-container header div,
+.data-source header div{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap:0.5rem;
+}
+.btns{
+    border: 0.5px solid #3b82f6;
+    border-radius: 0.75rem;
+    background: transparent;
+    padding:0.25rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+.btns h4{
+    font-size: 0.3rem;
+    font-weight: 600;
+    color:#3b82f6;
+}
+.btns i{
+    font-size: 0.4rem;
+    color:#3b82f6;
+    padding-right: 0.3rem;
+}
+.btns:hover i,
+.btns:hover h4{
+    color:whitesmoke;
+}
+
+.data-source-preview{
+    width: 90%;
+    height: 50vh;
+    background-color:#314663;
+    margin: 0 auto;
+    border-radius:0.5rem;
+    padding:0.24rem;
+    position: relative;
+}
+#preview-import{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 0.4rem;
+    color:whitesmoke;
+    letter-spacing: 1px;
+    line-height: 1rem;
+    resize:none;
+    overflow: auto;
+    outline: none;
+    overflow-x:auto;
+    white-space: pre;
+}
+
+#upload-btn{
+    padding:0.25rem 0.75rem;
+    margin-right: 1rem;
+    user-select: none;
+}
+
+.placeholder-text{
+    width: 100%;
+    position: absolute;
+    font-size: 0.55rem;
+    color:#bcc0c7;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+#generate-btn{
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    padding:0.25rem 0.5rem;
+}
