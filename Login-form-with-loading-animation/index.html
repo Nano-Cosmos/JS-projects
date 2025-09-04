@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form with Loading Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+</head>
+<body>
+
+    <form id="sign-in-form" action="" method="post" novalidate> 
+        <h2><span>Admin</span>Dashboard</h2>
+        <h4>Sign in to your account.</h4>
+        <div class="input-wrapper email-wrapper">
+            <input type="email" placeholder="Email" id="email" spellcheck="false">
+            <span class="error-msg"></span>
+        </div>
+        <div class="input-wrapper password-wrapper">
+            <input type="password" placeholder="Password" id="password">
+            <span class="error-msg"></span>
+            <span class="eye-btns">
+                <span class="eye eye-slash"><i class="fa-solid fa-eye-slash"></i></span>
+                <span class="eye eye-open"><i class="fa-solid fa-eye"></i></span>
+            </span>
+        </div>
+        <div class="input-wrapper">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Keep me logged in</label>
+            </div>
+            <div class="form-link-wrapper">
+                <a href="#">Forget Password?</a>
+            </div>
+        </div>
+        <div class="invalid-credentials-msg"></div>
+        <button id="sign-in-btn" type="submit">Sign in</button>
+        <div class="form-link-wrapper">
+            <a href="#">Don't have an account? Sign up</a>
+        </div>
+        <div class="loader"></div>
+    </form>
+    fakeuser@gmail.com
+    Password@123
+
+<script src="script.js"></script>
+</body>
+</html>
