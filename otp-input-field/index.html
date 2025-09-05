@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Input Field</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="left-side-content">
+                <h2>Login</h2>
+                <p>Get access to Your Orders,</p>
+                <p>Wishlist and Recommendations</p>
+            </div>
+        </div>
+        <div class="right-side request-otp-container">
+            <form action="#" method="post" novalidate id="login-form">
+                <div class="form-input-wrapper">
+                    <label id="phone-label" for="phone">Enter Your Mobile Number</label>
+                    <div class="phone-wrapper">
+                        <span id="country-code">+91</span>
+                        <input type="text" id="phone" name="Phone" maxlength="10" spellcheck="false" inputmode="numeric" pattern="[0-9]*" autocomplete="tel">
+                    </div>
+                </div>
+                <span>By continuing, you agree to SnapSolve's <a href="">Terms of Use</a> and <a href="">Privacy Policy</a><div class=""></div></span>
+                <button type="submit" id="request-otp-btn">Request OTP</button>
+            </form>
+            <p><a>New to SnapSolve? Create an account</a></p>
+        </div>
+        <div class="verify-otp-container">
+            <h3>Please enter the OTP sent to 
+                <span></span>. <a href="#">Change</a>
+            </h3>
+            <div class="otp-input-container">
+                <input type="text" data-input-field-id="0" class="otp-fields">
+                <input type="text" data-input-field-id="1" class="otp-fields">
+                <input type="text" data-input-field-id="2" class="otp-fields">
+                <input type="text" data-input-field-id="3" class="otp-fields">
+                <input type="text" data-input-field-id="4" class="otp-fields">
+                <input type="text" data-input-field-id="5" class="otp-fields">
+            </div>
+            <button id="verify-otp-btn">Verify</button>
+            <p class="resend-code">Not received your code? <a href="#">Resend code</a></p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
