@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    padding-bottom: 700px;
+    background-color: #0d1b2a;
+}
+.container{
+    width: 36%;
+    height: 96vh;
+    margin: 0.75rem auto;
+    padding:1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px hsla(100, 100%, 100%,1),
+    inset 0 0 6px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #0a0e31;
+}
+.default{
+    width: 100%;
+    background-color: #1d2141;
+    border-radius: 0.5rem;
+    padding:1.5rem 0.5rem;
+    margin: 0.3rem 0;
+    color:#f3f4f5;
+}
+.display{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+.pwrd-strength-container div:first-of-type{
+    padding: 0 0.125rem;
+    display: inline;
+}
+.pwrd-strength-container div:last-of-type{
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+.pwrd-length-slider-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pwrd-length-slider-box div:first-of-type{
+    display: inline;
+    font-size: 0.85rem;
+}
+.pwrd-length-slider-box div.slider-wrapper{
+    flex:1;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
+#slider{
+    width: 100%;
+    height: 3px;
+    -webkit-appearance: none;
+    background-color: #4e516a;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance:none;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: white;
+    outline: 0.25rem solid #5d68e2;
+    margin:-4px
+}
+.tooltip{
+    text-align: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid #4e516a;
+    color:#f3f4f5;
+    padding-top: 6px;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+}
+
+.pwrd-length-slider-box + p{
+    width: 100%;
+    text-align: left;
+    color: hsl(0, 0%, 37%);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+#generate-pswrd{
+    font-size: 1rem;
+    font-weight: 800;
+    color:#f3f4f5;
+    background: linear-gradient(to right,#677ae5,#754fa8);
+    border: none;
+    border-radius: 1rem;
+    padding:0.6rem 1rem;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+#generate-pswrd:hover{
+    animation: vibrate 0.3s ease infinite;
+}
+@keyframes vibrate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    33.3%{
+        transform: rotateZ(2deg);
+    }
+    66.6%{
+        transform: rotateZ(-4deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+#generate-pswrd:active{
+    animation: vibrate 0.3s ease;
+}
+.choice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0.5rem 2rem;
+}
+
+.choice .switch{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    padding:0.25rem 0.3rem;
+    position: relative;
+    background-color: #6d7082;
+}
+.switch .circle{
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.switch input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 999;
+    opacity: 1;
+    inset: 0;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+.switch:has(input[type="checkbox"]:checked) {
+    background-color: #5d68e2;
+}
+
+.switch:has(input[type="checkbox"]:checked) .circle{
+    transform: translateX(2rem);
+}
+
+.strength{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.strength .weak svg{
+    position: absolute;
+    top:0;
+    left:-10px;
+    height: 1.5rem;
+}
+.strength .weak svg.weak-svg{
+    color:red;
+}
+.strength .moderate i{
+    position: absolute;
+    color:orangered;
+    top:0;
+    left:-10px; 
+    font-size: 1.25rem;
+}
+.strength .strong svg{
+    position: absolute;
+    top:0;
+    left:-10px;
+    height: 1.5rem;
+}
+.strength .strong svg.strong-svg{
+    color:greenyellow;
+}

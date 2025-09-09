@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="display default" id="display">
+            CLICK GENERATE
+        </div>
+        <div class="pwrd-strength-container default">
+            <div>Password strength:</div>
+            <div class="strength">
+                <div class="strength-icon"></div>
+                <div class="strength-text"></div>
+            </div>
+        </div>
+        <div class="pwrd-length-slider-box default">
+            <div>Characters:</div>
+            <div class="slider-wrapper">
+                <input type="range" id="slider" min="4" max="32" value="8" step="1">
+                <div class="tooltip" id="tooltip">8</div>
+            </div>
+        </div>
+        <p>SETTINGS</p>
+        <div class="default choice">
+            <p>Include Uppercase</p>
+            <div class="switch">
+                <input type="checkbox" checked id="include-upper" data-value="upper">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="default choice">
+             <p>Include Lowercase</p>
+            <div class="switch">
+                <input type="checkbox" checked id="lower" data-value="lower">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="default choice">
+             <p>Include Numbers</p>
+            <div class="switch">
+                <input type="checkbox" id="include-numbers" data-value="numbers">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="default choice">
+             <p>Include Symbols</p>
+            <div class="switch">
+                <input type="checkbox" id="include-symbols" data-value="symbols">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <button id="generate-pswrd">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
