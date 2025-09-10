@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show & Hide password</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="wrapper">
+        <span class="line"></span>
+        <div class="container">
+            <h2>Sign In</h2>
+            <div class="username-container input-boxes">
+                <input type="text" id="user-name" spellcheck="false" autocomplete="off"">
+                <label for="user-name">Username</label>
+            </div>
+            <div class="password-container input-boxes">
+                <input type="password"  id="password" spellcheck="false">
+                <label for="password">Password</label>
+                <div class="eye-icon-container">
+                    <svg  class="flash-off" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flashlight-off-icon lucide-flashlight-off"><path d="M16 16v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4"/><path d="M7 2h11v4c0 2-2 2-2 4v1"/><line x1="11" x2="18" y1="6" y2="6"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+                    <svg class="flash-on" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flashlight-icon lucide-flashlight"><path d="M18 6c0 2-2 2-2 4v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V10c0-2-2-2-2-4V2h12z"/><line x1="6" x2="18" y1="6" y2="6"/><line x1="12" x2="12" y1="12" y2="12"/></svg>
+                </div>
+                <div class="light">
+                    
+                </div>
+            </div>
+            <div class="link-container">
+                <a href="#">Forgot Password?</a>
+                <a href="">Signup</a>
+            </div>
+            <div>
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>
