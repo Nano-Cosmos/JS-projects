@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="heading-wrapper">
+            <h2>BMI Calculator</h2>
+        </div>
+        <div class="result-container">
+            <div class="outer-circle">
+                <div class="inner-circle">
+                    <h3 id="bmiclass">Normal</h3>
+                    <p id="bmi">BMI = 22.5</p>
+                    <span class="pointer">
+                        <span class="head">^</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <form action="#" method="post" id="calculator">
+            <div class="button-container">
+                <label for="metric-units">Metric Units
+                     <input type="radio" name="unit-selection" id="metric-units" checked>
+                </label>
+                <label for="us-units">US Units
+                     <input type="radio" name="unit-selection" id="us-units">
+                </label>
+               
+               
+            </div>
+            <div class="input-container">
+                <div class="age-container">
+                    <label for="age">Age</label>
+                    <div class="small-gap">:</div>
+                    <div class="age-wrapper"><input type="number" id="age" step="1" min="2" max="120" value="25"></div>
+                </div>
+                <div class="gender-container">
+                    <label for="">Geneder</label>
+                    <div class="small-gap">:</div>
+                    <div class="switch">
+                        <input type="checkbox" id="gender">
+                        <div class="circle"></div>
+                        <span class="arrow"><i class="fa-sharp fa-solid fa-arrow-up"></i></span>
+                        <span class="cross"><i class="fa-sharp fa-solid fa-cross"></i></span>
+                    </div>
+                </div>
+                <div class="height-container">
+                    <label for="">Height</label>
+                    <div class="small-gap">:</div>
+                    <div class="height-wrapper metric-height-cm-wrapper">
+                        <input type="number" id="metric-height-cm" min="50" max="300" value="170">
+                        <span>cm</span>
+                    </div>
+                    <div class="height-wrapper us-height-feet-wrapper">
+                        <input type="number" id="us-height-feet" min="1" max="8" value="5">
+                        <span>feet</span>
+                    </div>
+                    <div class="height-wrapper us-height-inch-wrapper">
+                        <input type="number" id="us-height-inch" min="0" max="11" value="7">
+                        <span>inches</span>
+                    </div>
+                </div>
+                <div class="weight-container">
+                    <label for="">Weight</label>
+                    <div class="small-gap">:</div>
+                    <div class="weight-wrapper metric-weight-kg-wrapper">
+                        <input type="number" id="metric-weight-kg" min="10" max="300" value="65">
+                        <span>kg</span>
+                    </div>
+                    <div class="weight-wrapper us-weight-pound-wrapper">
+                        <input type="number" id="us-weight-pound" min="22" max="660" value="143">
+                        <span>pounds</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id="calculate-btn">Calculate Your BMI</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
